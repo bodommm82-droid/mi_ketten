@@ -1,0 +1,23 @@
+mutation CreateUserAccount($name: String!, $email: String!) @auth(level: PUBLIC) {
+  user_insert(data: { name: $name, email: $email })
+}
+
+mutation LogChallengeCompletion($challengeId: UUID!, $coupleId: UUID!, $comment: String) @auth(level: USER) {
+  completion_insert(data: {
+    challengeId: $challengeId,
+    coupleId: $coupleId,
+    comment: $comment,
+    completedAt_time: { now: true }
+  })
+}
+
+query GetCouplePoints($id: UUID!) @auth(level: USER) {
+  couple(id: $id) {
+    totalPoints
+    nickname
+  }
+}
+
+mutation UpdateRewardRedemption($id: UUID!, $isRedeemed: Boolean!) @auth(level: USER) {
+  reward_update(key: { id: $id }, data: { isRedeemed: $isRedeemed })
+}

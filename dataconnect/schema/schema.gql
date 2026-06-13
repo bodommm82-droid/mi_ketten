@@ -1,0 +1,39 @@
+type User @table {
+  name: String!
+  email: String!
+  avatarUrl: String
+  birthDate: Date
+}
+
+type Couple @table {
+  partner1: User!
+  partner2: User!
+  relationshipLevel: Int!
+  totalPoints: Int!
+  anniversaryDate: Date
+  nickname: String
+}
+
+type Challenge @table {
+  title: String!
+  description: String!
+  pointValue: Int!
+  category: String!
+  imageUrl: String
+}
+
+type Completion @table {
+  challenge: Challenge!
+  couple: Couple!
+  completedAt: Timestamp!
+  comment: String
+  proofPhotoUrl: String
+}
+
+type Reward @table {
+  title: String!
+  costInPoints: Int!
+  couple: Couple!
+  isRedeemed: Boolean
+  redeemedAt: Timestamp
+}

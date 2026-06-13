@@ -1,0 +1,33 @@
+mutation SeedDatabase @transaction {
+  user_insertMany(data: [
+    {
+      id: "550e8400-e29b-41d4-a716-446655440000",
+      name: "Alice",
+      email: "alice@example.com"
+    },
+    {
+      id: "550e8400-e29b-41d4-a716-446655440001",
+      name: "Bob",
+      email: "bob@example.com"
+    }
+  ])
+  couple_insertMany(data: [
+    {
+      id: "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+      partner1Id: "550e8400-e29b-41d4-a716-446655440000",
+      partner2Id: "550e8400-e29b-41d4-a716-446655440001",
+      relationshipLevel: 1,
+      totalPoints: 0,
+      nickname: "The Aces"
+    }
+  ])
+  challenge_insertMany(data: [
+    {
+      id: "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+      title: "Movie Night",
+      description: "Watch a movie together.",
+      pointValue: 10,
+      category: "Social"
+    }
+  ])
+}

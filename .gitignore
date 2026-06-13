@@ -1,0 +1,62 @@
+# Flutter
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+.env
+node_modules/
+
+# Android
+android/.gradle/
+android/app/build/
+android/build/
+android/local.properties
+android/key.properties
+
+# iOS
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Runner.xcworkspace/
+ios/Pods/
+ios/DerivedData/
+
+# macOS
+macos/Flutter/ephemeral/
+macos/Runner.xcworkspace/
+macos/Pods/
+
+# Windows
+windows/flutter/ephemeral/
+windows/runner/Debug/
+windows/runner/Release/
+
+# Linux
+linux/flutter/ephemeral/
+
+# Web
+build/web/
+
+# IntelliJ / Android Studio
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Dart
+*.lock
+
+# Firebase / secrets (ha vannak)
+firebase.json
+google-services.json
+GoogleService-Info.plist
+
+*.vsix
